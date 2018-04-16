@@ -1,0 +1,112 @@
+<html>
+
+<head>
+  <title> Steve's Portfolio </title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- <script src="/parallax.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.js"></script>
+</head>
+<title>Steve's Personal Portfolio</title>
+
+<body>
+  <!-- Header Welcome/Avatar sunset -->
+  <div class="parallax1" z-index='1'>
+    <p class="title" z-index='1'>
+      <strong>Welcome to my Personal Portfolio! </br> I'm
+        <%= person.firstName %>
+          <%= person.lastName %> and
+            </br>
+            This is just a slight insight into my life and who I want to become!
+      </strong>
+    </p>
+    <div class="avatar" z-index='2'></div>
+  </div>
+  <!-- Header end -->
+  <!-- About section -->
+  <div class="container">
+    <div class='aboutTitle'>
+      <h2>About Steve</h2>
+    </div>
+    <div class='about'>
+      Highly motivated developer from Cleveland, Ohio with a passion for learning new things. </br>
+      I started to learn programming on my own from simple Youtube tutorials and beginner books for JavaScript and HTML/CSS. </br>
+      Driven and permanently curious, I am now pursuing that curiousity at Origin Code Acacemy and dedicating most of my time to
+      kick start my career as a software developer. </br>
+      When I’m not coding, you can find me outdoors enjoying nature either hiking, snowboarding, or relaxing on the beach. </br>
+    </div>
+  </div>
+  <!-- About section end/ Skills section start -->
+  <div className="skills">
+    <div class="parallax2">
+      <h2 class="skillsTitle">My Skills</h2>
+      <div class="logo">
+        <img src="../img/html5-logo.png" height="200px" width="200px" />
+        <img src="../img/mongodb-logo.png" height="200px" width="200px" />
+        <img src="../img/js-logo.png" height="200px" width="200px" />
+        <img src="../img/jquery-shield.png" height="150px" width="400px" />
+        <img src="../img/nodejs-logo.png" height="200px" width="200px" />
+        <img src="../img/css3-logo.png" height="200px" width="200px" />
+        <img src="../img/react-logo.png" height="200px" width="200px" />
+        <img src="../img/mysql-logo.png" height="200px" width="200px" />
+        <img src="../img/redux-logo.png" height="200px" width="200px" />
+      </div>
+    </div>
+  </div>
+  <!-- Skills section ends, LIB parallax next -->
+  <div class="container">
+    <div class='aboutTitle'>
+      <h2>Some Example Work</h2>
+    </div>
+    <div class='workAbout'>
+      Here is just some of the pet projects I have worked on throughout attending Origin Code Academy. </br>
+      For more info on my GitHub, be sure to click the link below! </br>
+      <a href='https://github.com/StevenSchwarzmann'><img src="../img/github-logo.png" ref='https://github.com/StevenSchwarzmann' height='90px' width='140px'/></a>
+    </div>
+  </div>
+  <div class="parallax3">
+    <img class='thumbnail' src="../img/hackathon-screenshot.png" max-height="200px" width="100%"/>
+    <img class='thumbnail' src="../img/vstda-screenshot.png" max-height="200px" width="100%"/>
+  </div>
+  <!-- Contact begins -->
+  <div class='aboutTitle'>
+    </div>
+    <div class='contactAbout'>
+        Want to work together?</br> 
+        I’d love to hear from you and find out if I would be a good fit to help your company meet the goals they set! </br>
+        Please leave your information below and I will get back to as soon as i can!
+    </div>
+    <div class='table-container'>
+      <table>
+        <tr>
+        <form action="/thanks" method="POST" class='contact'>
+          <td><label class="fullName" for="fullName"><b>*First & Last Name:</b></label></td>
+          <td><input class="fullName" name="fullName" type="text" size='60'> </td>
+        </tr>
+        <tr>
+          <td><label class="email" for="email"><b>*Email:</b></label></td>
+          <td><input class="email" name="email" type="text" size='60'></td>
+        </tr>
+        <tr>
+          <td><label class="company" for="company"><b>*Company:</b></label> </td>
+          <td><input class="company" name="company" type="text" size='60'> </td>
+        </tr>
+        <tr>
+          <td><label class="phoneNumber" for="phoneNumber"><b>Phone Number </b>(optional) :</label></td>
+          <td><input class="phoneNumber" name="phoneNumber" type="text" size='60'> </td>
+        </tr>
+        <tr>
+          <td><label class="contactMessage" for="contactMessage"><b>Message:</b></label></td>
+          <td><textarea class="contactMessage" name="contactMessage" type="text" rows="6" cols="100"></textarea></td>
+        </tr>
+          <tr>
+            <td><input type="submit" class='submit' /> </td>
+          </tr>
+        </form>
+      </table>
+    </div>
+    
+
+</body>
+
+</html>
