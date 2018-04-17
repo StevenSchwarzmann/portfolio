@@ -52,7 +52,7 @@ function sendEmailToSendGrid(emailFrom, emailContent) {
   const sgMail = require("@sendgrid/mail");
 
   sgMail.setApiKey(
-    "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"
+    "API_KEY_HERE"
   );
 
   const msg = {
