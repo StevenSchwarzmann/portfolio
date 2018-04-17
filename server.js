@@ -5,7 +5,6 @@ var profile = require("./profile");
 const dotenv = require('dotenv').config();
 
 const app = express();
-console.log("env vars", process.env.DB_API)
 app.use("/profile", profile);
 app.use(morgan("dev"));
 app.use(bodyParser.json());
@@ -54,7 +53,7 @@ function sendEmailToSendGrid(emailFrom, emailContent) {
   const sgMail = require("@sendgrid/mail");
 
   sgMail.setApiKey(
-    "process.env.DB_API"
+    process.env.DB_API
   );
 
   const msg = {
