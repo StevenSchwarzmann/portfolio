@@ -54,7 +54,11 @@ function sendEmailToSendGrid(emailFrom, emailContent) {
   const sgMail = require("@sendgrid/mail");
 
   sgMail.setApiKey(
+<<<<<<< HEAD
     "process.env.DB_API"
+=======
+    "API_KEY_HERE"
+>>>>>>> 8b9eb003927f48ef2db1f6cb72e40328037cb2a9
   );
 
   const msg = {
