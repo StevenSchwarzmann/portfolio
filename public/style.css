@@ -152,4 +152,12 @@ input[type="text"] {
   font-size: 24px; 
 }
 
-
+.thankyou {
+  text-align: center;
+  font-size: 48px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: whitesmoke;
+  background-image: url('../img/thankyou.png');
+  background-position: center no-repeat;
+  background-size: 100% 100%;
+}

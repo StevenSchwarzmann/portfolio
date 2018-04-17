@@ -2,9 +2,10 @@ const express = require("express");
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 var profile = require("./profile");
+const dotenv = require('dotenv').config();
 
 const app = express();
-
+console.log("env vars", process.env.DB_API)
 app.use("/profile", profile);
 app.use(morgan("dev"));
 app.use(bodyParser.json());
@@ -33,6 +34,7 @@ app.get("/", (req, res) => {
     let emailContent = `
       A customer contacted me.
       <br/>His/her name: <i><b>${fullName}</b></i>
+      <br> From company: ${company}
       <br/>Phone #: ${phoneNumber}
       <br/>Their message was ${contactMessage}
     `;
@@ -52,7 +54,7 @@ function sendEmailToSendGrid(emailFrom, emailContent) {
   const sgMail = require("@sendgrid/mail");
 
   sgMail.setApiKey(
-    "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"
+    "process.env.DB_API"
   );
 
   const msg = {
